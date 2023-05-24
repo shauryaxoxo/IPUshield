@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* for whole project*/
+}
+body{
+    background-color: black;
+}
+#banner{     
+    background-image: url(pexels-james-wheeler-417074.jpg); /*gradient*/
+    background-size: cover;
+    background-position: center;
+    height :100vh;
+}
+
+.logo{
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+.text{
+    text-align: center;
+    color:rgb(132, 235, 247);
+    padding-top: 180px; 
+}
+.text h1{
+    margin-top:90px;
+    font-size: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow:2px 2px #006DB5;
+}
+.text p{
+    font-size: 30px;
+    font-style: none;
+    margin-top:10px;
+    font-family: 'Cardo', serif;
+    
+}
+#about-us{
+    margin: 10px;
+    font-style: normal;
+    color: #f0f4f7;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+}
+
+.button{
+    margin:70px auto 0;  /* top | left and right | bottom  margin auto means in center*/
+}
+
+.button a{
+    width:150px;
+    text-decoration: none; /* means border */
+    display:inline-block;  /* ek hi line mein aaye*/
+    margin: 10px 10px;
+    padding: 12px 0;
+    color: white;
+    border: .5px solid white;
+    font-size: large;
+    z-index: 1;    /*  bring in front from lower z indices */
+    transition: 0.5s; /*for colour change*/
+    position: relative;
+}
+
+.button a span{
+    width:0%;        /*span is created to have a white strip on find out*/
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgb(246, 29, 29);
+    z-index: -1;         /*span will stay behind find out*/
+    transition: 0.5s;    /* transition time of span which means strip */
+}
+
+.button a:hover span{
+    width: 100%;       
+}
+
+.button a:hover{
+    color: #000304 ;
+}
+
+#sidenav{
+    
+    width: 190px;
+    height:100vh;
+    position: fixed;
+    left: 0;
+    top: 0; 
+    background: #D5F3FE;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+nav ul li{
+    list-style: none;
+    margin: 70px 20px;
+    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #006DB5;
+}
+
+#menubtn{
+    
+    width: 50px;
+    height: 50px;
+    background-color: #006DB5;
+    text-align: center;
+    position:fixed;
+    left: 0;
+    top: 20px;
+    border-radius: 3px;   /*give round shape very useful for boxes*/
+    z-index: 3;
+    cursor: pointer;
+}
+#menubtn img{
+    width: 20px;
+    margin-top: 15px;
+}
+@media screen and (max-width: 770px){        /*responsive*/
+    .text h1{
+        font-size: 44px;
+    }
+    .button a{
+        display: block;
+        margin: 20px auto;
+    }
+}
+#feature{
+    width: 100%;
+    padding: 70px 0;
+}
+.title-text{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.title-text p{
+    margin: auto;
+    font-size: 20px;
+    color:#006DB5;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+
+.title-text p::after{ 
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#006DB5,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.title-text h1{
+    font-size: 50px;
+}
+
+.featurebox{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.features{
+    flex-basis: 50%;
+}
+
+.features-img{
+    flex-basis: 50%;
+    margin:auto;
+}
+
+.features-img img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+.features h1{
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #006DB5;
+}
+
+.featuresdesc{
+    display:flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.btn{
+    font-weight: bold;
+}
+.featuretext{
+   display: flex; 
+}
+
+.description{
+    padding-left:40px;
+    width: 60vw;
+    height: auto;
+    font-size: 20px;
+}
+
+.about-image{
+display:inline ;
+width: 27vw;
+height: 500px;
+background-size: cover;
+background-position: center;
+border-radius: 50%;
+margin-left: 50px;
+
+}
+
+/* --services-- */
+#service{
+    width:100%;
+    padding: 70px 0px;
+    background-color: rgb(1, 28, 48);
+    height: 400px;
+
+}
+
+.service-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.single-service{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+}
+.single-service img{
+    width:100%;
+    border-radius: 7px;
+
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    background: linear-gradient(rgba(0,0,0,0.5),#006DB5);
+    opacity: 0;
+    transition: 1s;
+}
+.single-service:hover .overlay{
+    opacity: 1;
+}
+.service-desc{
+    width: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%);
+    transition: 1s;
+}
+
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+
+.service-desc p{
+    font-size: 14px;
+}
+
+.single-service:hover .service-desc{
+    bottom: 40%;
+    opacity: 1;
+}
+
+.container{
+    width: 100%;
+    min-height: 120vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.testimonial{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+
+}
+
+.testimonial-text{
+    background: #006db5;
+    color: #fff;
+    width: 120%;
+    height: 650px;
+    position: relative;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+ol li{
+    padding: 20px;
+}
+.user-text{
+    width: 80%;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display:none;
+}
+
+.user-text .fas{
+    font-size: 30px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+
+}
+.user-text span{
+    display: block;
+    font-size: 13px;
+    margin-top: 70px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.testimonial-pic{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: -350px;
+
+}
+.user-pic{
+    width: 65px;
+    padding: 5px;
+    margin-top: 20px;
+    border-radius: 20%;
+    margin: 10px;
+    cursor: pointer;
+;
+
+} 
+.user-text.active-text{
+    display: block;
+    animation: moveup 0.5s linear forwards;
+
+}
+.user-pic.active-pic{
+    width: 100px;
+    border: 3px solid #006db5;
+    box-shadow: 5px 5px rgba(0,0,0,0.2);
+
+
+}
+
+@keyframes moveup {
+    0%{
+        margin-top:25px;
+    }
+    100%{
+        margin-top: 25px;
+    }
+    
+}
+.heading{
+    text-align: center;
+    background-color: white;
+    padding-top: 50px;
+    font-size: 40px;
+    color: #006db5;
+}
+
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style the container/contact section */
+  .contactus {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+.row{
+    position: relative;
+    left: 43%;
+}
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+
+.fa-solid{
+    z-index: 3;
+    font-size: 30px;
+}
+

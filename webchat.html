@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="webchatstyle_1.css" />
+    <script>(function(w, d) { w.CollectId = "646cf0d9ed17b60bbf479282"; var h = d.head || d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.setAttribute("type", "text/javascript"); s.async=true; s.setAttribute("src", "https://collectcdn.com/launcher.js"); h.appendChild(s); })(window, document);</script>
+    
+  </head>
+  <body>
+    <!-- Person selector: this contains buttons for user to select whether to chat as John or Jane -->
+    <div class="person-selector">
+      <button class="button person-selector-button active-person" id="Anonymous-selector">Anonymous</button>
+      <button class="button person-selector-button" id="You-selector">You</button>
+    </div>
+    <div class="chat-container">
+      <h2 class="chat-header">Anonymous person chatting...</h2>
+
+      <div class="chat-messages">
+        <div class="message blue-bg">
+          <div class="message-sender">Anonymous</div>
+          <div class="message-text">Hey , what's up?</div>
+          <div class="message-timestamp">10:30 AM</div>
+        </div>
+        <div class="message gray-bg">
+          <div class="message-sender">You</div>
+          <div class="message-text">I have some queries related to campus safety.</div>
+          <div class="message-timestamp">10:35 AM</div>
+        </div>
+      </div>
+
+      <form class="chat-input-form">
+        <input type="text" class="chat-input" required placeholder="Type here, " />
+        <button type="submit" class="button send-button">Send</button>
+      </form>
+      <button class="button clear-chat-button">Clear Chat</button>
+    </div>
+
+    <script src="webchatscript_1.js"></script>
+  </body>
+</html>
